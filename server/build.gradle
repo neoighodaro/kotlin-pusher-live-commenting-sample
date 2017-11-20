@@ -1,0 +1,46 @@
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.1.4-3'
+    ext.ktor_version = '0.2.4'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'application'
+apply plugin: 'kotlin'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://dl.bintray.com/kotlin/kotlinx.support'
+    }
+    maven {
+        url 'http://dl.bintray.com/kotlin/ktor'
+    }
+}
+
+mainClassName = 'org.jetbrains.ktor.jetty.DevelopmentHost'
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "org.jetbrains.ktor:ktor-core:$ktor_version"
+    compile "org.jetbrains.ktor:ktor-locations:$ktor_version"
+    runtime "org.jetbrains.ktor:ktor-jetty:$ktor_version"
+    compile "com.pusher:pusher-http-java:1.0.0"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
