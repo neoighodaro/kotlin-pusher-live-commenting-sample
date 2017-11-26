@@ -14,7 +14,7 @@ fun Application.main() {
     install(Routing) {
         get("/{message}") {
             val i = call.parameters["message"]!!
-            val pusher = Pusher("411734", "f1dc462a7b662a89ec08", "811b93edfe80894558f3")
+            val pusher = Pusher("PUSHER_ID", "PUSHER_KEY", "PUSHER_SECRET")
             pusher.setCluster("eu")
             pusher.trigger("my-channel", "my-event", Collections.singletonMap("message", i))
             call.respond("response sent")
