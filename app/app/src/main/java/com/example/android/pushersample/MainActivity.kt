@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
 
 
         val options = PusherOptions()
-        options.setCluster("eu")
-        val pusher = Pusher("f1dc462a7b662a89ec08", options)
+        options.setCluster("PUSHER_CLUSTER")
+        val pusher = Pusher("PUSHER_KEY", options)
 
         //subscribe to a channel
         val channel = pusher.subscribe("my-channel")
