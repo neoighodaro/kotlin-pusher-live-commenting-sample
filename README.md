@@ -6,8 +6,12 @@ How to implement live commenting on Kotlin using Pusher.
 ![](https://www.dropbox.com/s/7ytq2cqtqrtmmfw/How-to-build-live-commenting-in-Kotlin-7.gif?raw=1)
 
 ## Getting Started
-
-...
+- Clone the repository or download the project
+- Open the project in Android studio
+- Set the Pusher Keys in the `MainActivity.kt` file.
+- Set the Pusher Keys in the `Main.kt` file.
+- Run the command `./gradlew run` to run the Kotlin server.
+- Run the main application.
 
 ### Requirements
 - Knowledge of the Kotlin programming language.
@@ -16,9 +20,6 @@ How to implement live commenting on Kotlin using Pusher.
 - IntelliJ IDEA installed.
 
 ## Built With
-
-...
-
-## Acknowledgements
-
-...
+- Kotlin programming language.
+- Android Studio
+- Pusher Channels
